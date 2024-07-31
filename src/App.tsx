@@ -2,9 +2,10 @@ import Card from "./components/card";
 import Footer from "./components/footer";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
+import Data from "./data";
 
-const vehicles = ["Carros", "Motos", "Taxi"];
 const today = new Date();
+const day = format(today, "EEEEEE").toLowerCase();
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         {format(today, "eeee dd 'de' MMMM", { locale: es })} es:
       </p>
       <div className="flex flex-col md:flex-row gap-2 ">
-        {vehicles.map((vehicle) => (
-          <Card vehicle={vehicle} />
+        {Data.map((vehicle) => (
+          <Card vehicle={vehicle} day={day} />
         ))}
       </div>
       <Footer />
