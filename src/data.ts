@@ -27,6 +27,10 @@ const Data = [
     type: "taxi",
     copy: "Taxi",
     emoji: "🚕",
+    law: {
+      "8/1": 0,
+      "8/2": 1,
+    },
   },
 ];
 

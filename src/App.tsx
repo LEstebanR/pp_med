@@ -6,6 +6,7 @@ import Data from "./data";
 
 const today = new Date();
 const day = format(today, "EEEEEE").toLowerCase();
+const date = format(today, "M/d");
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       </p>
       <div className="flex flex-col md:flex-row gap-2 ">
         {Data.map((vehicle) => (
-          <Card vehicle={vehicle} day={day} />
+          <Card vehicle={vehicle} day={day} date={date} />
         ))}
       </div>
       <Footer />
